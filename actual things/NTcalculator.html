@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,  initial-scale=1">
+      <title>mini stvarcica</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   </head>
+   <body>
+     <!-- Navbar -->
+      <nav class="navbar is-success">
+        
+        <div class="navbar-brand">
+          <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+          <a id="hamburger" role="button" class="navbar-burger burger" aria-expanded="false" onclick="myFunction()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+         <div class="navbar-menu">
+            <div class="navbar-start">
+               <a id="Home" class="navbar-item">
+               Home
+               </a>
+               <a class="navbar-item">
+               About
+               </a>
+               <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                  More
+                  </a>
+                  <div class="navbar-dropdown">
+                     <a class="navbar-item">
+                     Distinguished problems
+                     </a>
+                     <a class="navbar-item">
+                        Personal
+                        <!-- bezouts identity, ptolomeys sine lemma etc...
+                           -->
+                     </a>
+                     <hr class="navbar-divider">
+                     <a class="navbar-item">
+                     Report an issue
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="navbar-end">
+               <div class="navbar-item">
+                  <div class="buttons">
+                     <a class="button is-success">
+                     <strong>Blog</strong>
+                     </a>
+                     <a id="Contact" class="button is-light">
+                     Contact
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+<section class="section">
+         <div class="container">
+            <button id="residue" class="button is-dark"> $$\ x \ (mod \ n) = \ ?$$  </button>
+         </div>
+         <br/>
+         <div class="container">
+            <button id="ord" class="button is-dark"> $$ord_n (x)= \ ?$$</button>
+         </div>
+         <br/>
+         <div class="container">
+            <button id="x^y" class="button is-dark"> $$x^y \ (mod \ n)= \ ?$$</button>
+         </div>
+         <br/>
+         <div class="container">
+            <button id="system" class="button is-dark"> Residue list of powers of $$\ x \ (mod \ n) $$</button>
+         </div>
+         <br/>
+         <div class="container">
+            <button id="phi" class="button is-dark"> $$ \phi(n)= \ ?$$</button>
+         </div>
+         <br/>
+         <div class="container">
+            <button id="divisors" class="button is-dark"> Divisor properties of $$\ n$$</button>
+         </div>
+         <br/>
+         <div class="container">
+            <button id="prime" class="button is-dark"> Prime factors of $$\ n$$</button>
+         </div>
+         <br/>
+         <div class="container">
+            <button id="NZD" class="button is-dark"> $$GCD(a,b)= \ ?$$</button>
+         </div>
+         <br/>
+      </section>
+      <script src="script.js"></script>
+      </body>
+      </html>

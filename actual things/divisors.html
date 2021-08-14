@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">  
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  
+  </head>
+  <body>
+
+  <script src="script.js"></script>
+  <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a id="Home2" class="navbar-item">
+        Home 
+        <script>
+          document.getElementById("Home2").onclick=function(){
+       location.href="index.html";
+     };
+        </script>
+      </a>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+    
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            
+          </a>
+          <a class="navbar-item">
+            
+          </a>
+          <a class="navbar-item">
+            
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-success">
+            <strong>My work</strong>
+          </a>
+          <a class="button is-light">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+    <section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Divisor calculator
+      </h1>
+      <h2 class="subtitle">
+        Enter the number and I'll give you information about the divisors.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section is-align-content-center">
+    <div class="container is-align-content-center">
+ <h2 class="text has-text-black-bis">Enter the number: </h2>
+
+ <input id="n" class="input is-medium" type="text " placeholder="Input n">
+
+ <div id="ispis*" class="text has-text-black-bis">
+ Properties: 
+  </div>
+  <br/>
+  <div id="num" class="text has-text-black-bis">
+    Number of divisors is:  
+    </div>
+    <br/>
+  <div id="suma" class="text has-text-black-bis">
+    Sum of divisors is:  
+    </div>
+    <br/>
+</section>
+
+
+
+<script src="divisors.js"></script>
+ </body>
+</html>
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,  initial-scale=1">
+      <title>mini stvarcica</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+      MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+   </head>
+   <body>
+     <nav class="navbar is-success">
+        
+        <div class="navbar-brand">
+          <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+          <a id="hamburger" role="button is-center is-medium" class="navbar-burger burger" aria-expanded="false" onclick="myFunction()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+         <div class="navbar-menu">
+            <div class="navbar-start">
+               <a id="Home" class="navbar-item">
+               Home
+               </a>
+               <a class="navbar-item">
+               About
+               </a>
+               <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                  More
+                  </a>
+                  <div class="navbar-dropdown">
+                     <a class="navbar-item">
+                     Distinguished problems
+                     </a>
+                     <a class="navbar-item">
+                        Personal
+                        <!-- bezouts identity, ptolomeys sine lemma etc...
+                           -->
+                     </a>
+                     <a id="game" class="navbar-item">
+                       The Game
+                     </a>
+                     <hr class="navbar-divider">
+                     <a class="navbar-item">
+                     Report an issue
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="navbar-end">
+               <div class="navbar-item">
+                  <div class="buttons">
+                     <a class="button is-success">
+                     <strong>Blog</strong>
+                     </a>
+                     <a id="Contact" class="button is-light">
+                     Contact
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <section class="hero is-success is-small">
+         <div class="hero-body">
+            <div class="container">
+               <h1 class="title">
+                  The Game
+               </h1>
+               <h2 class="subtitle">
+                  Force yourself  to do all types of problems and have fun at the same time
+               </h2>
+            </div>
+         </div>
+      </section>
+      <br/>
+     <div class="tile is-ancestor">
+  <div class="tile is-6 is-vertical is-parent">
+    <div class="tile is-child box">
+      <p class="title is-align-items-center">
+        <button id="start" class="button is-fullwidth is-medium is-primary">Start game</button>
+      </p>
+      <p id="problem">Your problem appears here.</p>
+ 
+    </div>
+    <div class="tile is-child box">
+      <div class="buttons is-justify-content-center">
+      <button id="Solved" onclick="solving()" class="button is-grouped is-medium is-warning" > Solved (+100)</button>
+      
+      <button id="Skip" class="button is-grouped is-medium is-primary"> Skip (-75) </button>
+      <button id="Fakesolved" class="button is-grouped is-medium is-black"> Fakesolved (-50) </button>
+      </div>
+      <button id="End" class="button is-medium is-danger is-light is-fullwidth"> END </button>
+      <box id="Score" class="box"> SCORE: 
+        </box>
+        <box id="Highscore" class="box"> HIGHSCORE: </box>
+    </div>
+  </div>
+  
+  <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title"> Rules</p>
+        <p class="subtitle">Pressing "Solved" increases your score by 100, pressing "Skip" decreases your score by 75 and an unfortunate fakesolve decreases your score by 50.
+        </p>
+        
+        <p class="subtitle">
+          Pressing the "END" button will automaticaly end the game and your score will be memorised at that point (bragging rights).
+          </p>
+        <p class="title">How it works</p>
+        <p class="subtitle">The problem difficulty is determined by your current score. Obviously, this isn't graded so try to be truthful for your own sake. </p>
+        <p class="subtitle"> The problems are NOT original and all rights go to the respected authors (links or source to the previous shown problem is always near the bottom)
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </article>
+    </div>
+</div>
+
+
+  <script src="randomgame.js"></script>
+   </body>
+</html>

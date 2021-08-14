@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">  
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+
+  <script src="script.js"></script>
+<section class="section">
+    <div class="container">
+ <h1 class="title has-text-black-bis">Find \( ord_n (x) \): </h1>
+
+ <input id="x" class="input is-medium" type="text " placeholder="Input x">
+
+
+<input id="n" class="input is-medium" type="text " placeholder="Input n">
+
+ <div id="ispis*" class="title has-text-black-bis">
+ Result: 
+  </div>
+</section>
+<script>
+ 
+      var inputx = document.getElementById("x");
+      var inputn=document.getElementById("n");
+inputx.addEventListener("keyup", function(event) {
+  if(event.keyCode===13){
+    document.getElementById("n").focus();
+  }
+});
+  
+inputn.addEventListener("keyup", function(event){
+  if(event.keyCode===13){
+    var res;
+  var vrijednostx=inputx.value;
+  var vrijednostn=inputn.value;
+  var k=1;
+  var previous_residue=vrijednostx;
+  while(res !== 1){
+   res=(vrijednostx*previous_residue) % vrijednostn;
+   previous_residue=res;
+   k++;
+  }
+ 
+    document.getElementById("ispis*").innerHTML+=k;
+  }
+});
+
+    </script>
+ </body>
+</html>

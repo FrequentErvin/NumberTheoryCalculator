@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">  
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  
+  </head>
+  <body>
+
+
+
+
+
+    
+ <!-- bezuov stav dokaz: 
+ Let $a,b$ be two positive integers with $d=GCD(a,b)$, then there must exist integers $x,y$ such that $ax+by=d$. Proof:
+ Let $a=d*a'$ and $b=d*b'$. Inserting into the wanted equation we would like to find $x,y$ such that $a'x+b'y=1$ Now change the labelling (switch a' with a and b' with b). Notice that this is equivalent to $ax=1-by$. Looking at divisibility this is equivalent to proving the existence  an integer $x$ such that for any pair of coprime integers $(a,b)$ $a\cdot x \equiv 1 \ (mod \ b)$. This can be done in two ways: 1) For the sake of contradiction assume there isn't such an integer. Notice that there are $b$ possible residues $mod$ $b$. Look at the numbers of type $a\cdot i$ $mod$ $b$ where $i=1,2,3...$. Obviously then there exist $i=p,q$ such that $px \equiv qx (mod b)$ or $b|(p-q)x$ or $b|p-q$ but since $p,q<b$ this means $p=q$ contradiction! 2) Pick $x=a^{\\phi{b}-1}$ and we're done. (this requires some more technical knowledge)-->
+
+<!-- kul zadaci na ovaj fazon: 
+1) Let $n$ be an odd integer greater than 1 and let $c_1, c_2, \ldots, c_n$ be integers. For each permutation $a = (a_1, a_2, \ldots, a_n)$ of $\{1,2,\ldots,n\}$, define $S(a) = \sum_{i=1}^n c_i a_i$. Prove that there exist permutations $a \neq b$ of $\{1,2,\ldots,n\}$ such that $n!$ is a divisor of $S(a)-S(b)$. 
+
+2) Let $n$ be positive integer and there are cards $a_1,a_2,...,a_2n$. A perfect mix of cards is an operation which rearranges the order of $a_1,a_2,...,a_2n$ into $a_1,a_{n+1},a_2,a_{n+2},...,a_n,a_{2n}$. Prove that there exist infinitely many $n$ such that after $n$ operations we get the same arrangement as in the beginning at some point.
+
+3)Find all pairs of positive integers $(m,n)$ for which there exist relatively prime integers $a$ and $b$ greater than $1$ such that
+$$\frac{a^m+b^m}{a^n+b^n}$$
+is an integer. 
+
+4)$n>1$ is odd number. There are numbers $n,n+1,n+2,...,2n-1$ on the blackboard. Prove that we can erase one number, such that the sum of all numbers will be not divided any number on the blackboard.
+
+5) Let $c$ and $n > c$ be positive integers. Mary's teacher writes $n$ positive integers on a blackboard. Is it true that for all $n$ and $c$ Mary can always label the numbers written by the teacher by $a_1,\ldots, a_n$ in such an order that the cyclic product $(a_1-a_2)\cdot(a_2-a_3)\cdots(a_{n-1}-a_n)\cdot(a_n-a_1)$ would be congruent to either $0$ or $c$ modulo $n$?
+
+6) (EGZ Theorem) Prove that from $2n-1$ integer numbers, we can always choose $n$ numbers such that the sum of them is divisible by $n$
+
+7) 4^x+4^y+4^z=a^2
+
+8) Let $x$ and $y$ be integers and let $p$ be a prime number. Suppose that there exist realatively prime positive integers $m$ and $n$ such that
+$$x^m \equiv y^n \pmod p$$Prove that there exists an unique integer $z$ modulo $p$ such that
+$$x \equiv z^n \pmod p \quad \text{and} \quad y \equiv z^m \pmod p$$
+
+9) An $8\times8$ chessboard is completely tiled by $2\times1$ dominoes. Prove that we can place positive integers in all cells of the table in such a way that the sums of numbers in every domino are equal and the numbers placed in two adjacent cells are coprime if and only if they belong to the same domino. (Two cells are called adjacent if they have a common side.)
+
+10) How can we say that $  a^{gcd(m,n)} - 1  $ divides $a^{m} -1 $ or $a^{n} -1 $ while proving gcd($a^{m} -1 $ , $a^{n} -1 $) = $  a^{gcd(m,n)} - 1  $ & we only know that gcd($a^{m} -1 $ , $a^{n} -1 $) divides $  a^{gcd(m,n)} - 1$ ?
+
+11)Prove the expression $\\frac{gcd(n,m)}{n} binom bla bla MONT
+
+12) For all positive integers $n$, denote with $f(n)$ be the smallest positive integer $m$ such that $1+2+...+m$ is divisible by $n$. Find all $n$ such that $f(n)=n-1$
+
+13) divni ruski zadacic py+1 ARMO 2020 :))))
+
+14) bihmo C4 estonia 2003. TST
+
+********Sequences:********
+
+a_(n+1)=1+n/a_n - francophone - dig deeper
+
+
+ELMO SHL:
+a_(n+1)=a_n+floor(sqrt(b_n))
+b_(n+1)=b_n+floor(sqrt(a_n))
+
+ToT 2002:
+svaki iduci se definise kao najmanji koji se nije pojavio dosad i koji nije relativno prost sa prethodnim.
+
+America USAMO 2007?
+niz tako da a_1+a_2+...+a_k je djeljivo sa k (najmanji)
+
+IMO 2017 P1
+
+A1 ISL 2015
+N1 ISL 2015
+Summer math olympiad 2020 P1
+CMO 2020 P5 (search :"of discrete continuity")
+
+codeforces: A. Tile Painting 599. runda div 1 ax+by=1
+
+APMO 99
+
+HMO 2010 prime sequences
+
+Onaj niz adisin "da li mogu svi bit prosti brojevi"
+
+BMO SHL onaj fazoncic 2010
+
+ELMO 2020 fibonacci
+
+ISL 2001 cudan bez argumenta
+ISL 2004 dal sekvenca moze bit neogranicena
+
+https://codeforces.com/contest/1358/problem/C - kjuttt
+ -->
+ </body>
+</html>

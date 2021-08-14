@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">  
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  
+  </head>
+  <body>
+
+  <script src="script.js"></script>
+<section class="section">
+    <div class="container">
+ <h1 class="title has-text-black-bis">Find prime factors of: </h1>
+
+ 
+ <input id="ne" class="input is-medium" type="text " placeholder="Input n">
+ <div id="ispis?" class="title has-text-black-bis">
+ Result: 
+  </div>
+</section>
+
+<script>
+
+      var inputn = document.getElementById("ne");
+      var brojac=0;
+  
+inputn.addEventListener("keyup", function(event){
+  if(event.keyCode===13){
+    var vrijednostn=inputn.value;
+    function prime_factors(num) {
+  function is_prime(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++)
+    {
+      if (num % i === 0) return false;
+    }
+    return true;
+  }
+  const result = [];
+  for (let i = 2; i <= num; i++)
+  {
+    while (is_prime(i) && num % i === 0) 
+    {
+      if (!result.includes(i)) result.push(i);
+      num /= i;
+    }
+  }
+  return result;
+}
+document.getElementById("ispis?").innerHTML+=prime_factors(vrijednostn);
+brojac++;
+/*var spf=[]; 
+const maxn=Number.MAX_SAFE_INTEGER;
+function sieve() 
+{ 
+    spf[1] = 1; 
+    for (i=2; i<maxn; i++) 
+        spf[i] = i; 
+    for (i=4; i<maxn; i+=2) 
+        spf[i] = 2; 
+  
+    for (i=3; i*i<maxn; i++) 
+    { 
+
+        if (spf[i] == i) 
+        { 
+
+            for (j=i*i; j<maxn; j+=i) 
+
+                if (spf[j]==j) 
+                    spf[j] = i; 
+        } 
+    } 
+} 
+sieve();
+function getFactorization(int x) 
+{ 
+    var ret=[]; 
+    while (x != 1) 
+    { 
+        ret.push(spf[x]); 
+        x = x / spf[x]; 
+    } 
+    return ret; 
+} 
+   var p=[];
+   p=getFactorizationU(vrijednostn);
+    for (i=0; i<p.length(); i++) {
+      document.getElementById("ispis?").innerHTML+="šatalplr";
+    }*/
+       
+     
+  }
+});
+    </script>
+ </body>
+</html>
